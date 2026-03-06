@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haruy Sushi</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend:
+        {
+          fontFamily: {
+            barlow: ['Barlow', 'sans-serif'],
+          },
+          colors:
+          {
+            primary: '#ca3c3f',
+            dark: '#222222',
+            muted: '#999999',
+            footer: '#333333',
+          }
+        }
+      }
+    }
+  </script>
+
+
+</head>
+
+<body class="bg-gray-100">
+
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center">
+
+        <div class="flex items-center space-x-3">
+          <img src="./img/logo.png" class="w-29" alt="Logo Haruy Sushi">
+        </div>
+
+
+        <div class="md:hidden flex items-center">
+          <button id="btn-mobile">
+
+            <svg class="w-6 h-6 text-gray-700 hover:text-red-600" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hidden md:hidden bg-white" id="menu-mobile">
+      <ul>
+        <li>
+          <a href="#cardapio" class="block text-sm px-4 py-4 hover:bg-red-500 hover:text-white transition duration-300">
+            Cardápio
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
+
+      <div class="md:w-1/2 text-center md:text-left">
+        <p class="text-2xl font-semibold text-gray-800 mb-4">
+          O Verdadeiro Sabor da Cozinha Japonesa
+        </p>
+        <a href="#cardapio" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition">
+          Ver Cardápio
+        </a>
+      </div>
+
+      <div class="md:w-1/2 mt-8 md:mt-0">
+        <img src="./img/banner.png" alt="Prato japonês" class="rounded-lg shadow-md border-5">
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-100" id="cardapio">
+    <div class="max-w-4xl mx-auto px-4">
+
+      <h1 class="text-3xl font-bold text-center mb-10 text-red-700">Cardápio</h1>
+
+      <!-- Menu Categoria Inicío -->
+      <nav id="nav-categorias" class="overflow-x-auto whitespece-nowrap 
+      snap-x flex gap-2 mt-6 pb-1">
+
+        <button data-cat="sushis" class="snap-start px-4 py-1 rounded-full 
+        bg-primary text-white font-bold text-sm transition-transform 
+        duration-150 cursor-pointer flex-shrink-0 btn-cat">
+          Sushi
+        </button>
+
+        <button data-cat="temakis" class="snap-start px-4 py-1 rounded-full 
+        bg-primary text-white font-bold text-sm transition-transform 
+        duration-150 cursor-pointer flex-shrink-0 btn-cat">
+          Temakis
+        </button>
+
+        <button data-cat="bebidas" class="snap-start px-4 py-1 rounded-full 
+        bg-primary text-white font-bold text-sm transition-transform 
+        duration-150 cursor-pointer flex-shrink-0 btn-cat">
+          Bebidas
+        </button>
+
+        <button data-cat="sobremesas" class="snap-start px-4 py-1 rounded-full 
+        bg-primary text-white font-bold text-sm transition-transform 
+        duration-150 cursor-pointer flex-shrink-0 btn-cat">
+          Sobremesas
+        </button>
+      </nav>
+      <!-- Menu Categoria Fim -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Categoria temakis -->
+      <div id="cat-temakis" class="categoria-conteudo">
+        <div class="text-left text-dark font-extrabold text-[22px] 
+        mt-8 mb-4">Temakis</div>
+
+
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 90.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/sushi_spicy.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/sushi_spicy.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">Temaki</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 90,00</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/sushi_salmao.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/sushi_salmao.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">Temaki</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 79,00</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+          </div>
+        </div>
+
+      <!-- Categoria sushis -->
+      <div id="cat-sushis" class="categoria-conteudo">
+        <div class="text-left text-dark font-extrabold text-[22px] 
+        mt-8 mb-4">Sushis e Combinados</div>
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/sushi_spicy.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/sushi_spicy.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">Combinado Sushi</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 99,00</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/sushi_salmao.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/sushi_salmao.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">Combinado Sushi</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 90,00</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/sushi_camarao.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/sushi_camarao.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">Combinado Sushi</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 85,00</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/sushi_atum.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/sushi_atum.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">Combinado Sushi</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 69,99</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoria Bebidas -->
+      <div id="cat-bebidas" class="categoria-conteudo">
+        <div class="text-left text-dark font-extrabold text-[22px] 
+        mt-8 mb-4">Bebidas Especiais</div>
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/coca_cola.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/coca_cola.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">Coca-Cola</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 7,00</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/agua_mineral.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/agua_mineral.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">Água Mineral</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 2,50</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/heineken.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/heineken.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">Heineken</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 6,99</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border border-gray-100 
+          relative flex flex-col hover:shadow-md transition-shadow group">
+            <!-- fundo clicavel -->
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+              './img/sushi_spicy', 's_2')">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/suco_laranja.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/suco_laranja.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">Suco de Laranja</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 12,00</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoria Sobremesas -->
+      <div id="cat-sobremesas" class="categoria-conteudo">
+        <div class="text-left text-dark font-extrabold text-[22px] 
+        mt-8 mb-4">Doces e Sobremesas</div>
+
+
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/hotroll_banana.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/hotroll_banana.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">hotroll de banana</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 20,00</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/mochi_morango.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/mochi_morango.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">Mochi de Morango</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 12,00</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+
+        <div class="grid-cols-2 gap-4">
+          <div class="bg-white rounded-[20px] p-3 shadow-sm border 
+          border-gray-100 relative flex flex-col hover:shadow-md 
+          transition-shadown group">
+            <div class="absolute insert-0 z-0 cursor-pointer" onclick="abrirModalDetalhes('Combinado Sushi', 99.00, '10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis', 
+               './img/sorvete_matcha.png', 's_1')">
+
+            </div>
+            <!-- Botão Favorito -->
+            <button class="absolute top-3 right-3 text-gray-300 hover:text-primary transition-colors z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </button>
+
+            <!-- imagem -->
+            <img src="./img/sorvete_matcha.png" alt="Combinado Sushi" class="w-full h-24 object-contain mb-2 mt-2 transition-transform 
+                     duration-300 drop-shadow-sm group-hover:scale-105 pointer-events-none 
+                     relative z-10">
+            <!-- nome e preço -->
+            <div class="text-left w-full mt-auto relative z-10 pointer-events-none">
+              <h4 class="font-bold text-dark text-sm leading-tight">Sorvete de Matcha</h4>
+              <p class="text-primary font-black text-lg leading-none mt-1">R$ 8,00</p>
+            </div>
+            <!-- Botão adicionar -->
+            <button onclick="adicionarItem('s_1', 'Combinado Sushi', 99.00)" class="w-full bg-primary text-white py-2 rounded-x1 text-xs font-bold 
+                       mt-3 shadow-md hover:bg-red-700 active:scale-95 transition-all 
+                       z-10 relative">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- Categoria: Sushi
+      <div id="cat-sushis" class="categoria-conteudo">
+
+        <h2 class="text-xl font-semibold mb-4">Sushi</h2>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Combinado Sushi</h3>
+            <span class="text-red-600 font-semibold">R$ 99,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Combinado Hot</h3>
+            <span class="text-red-600 font-semibold">R$ 75,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            10 Sashimis, 10 Uramakis Filadélfia e 10 Uramakis
+          </p>
+        </div>
+      </div> -->
+
+      <!-- Categoria: Temakis
+      <div id="cat-temakis" class="categoria-conteudo">
+
+        <h2 class="text-xl font-semibold mb-4">Temakis</h2>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Temaki Filadélfia</h3>
+            <span class="text-red-600 font-semibold">R$ 28,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Salmão, cream cheese e pepino
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Temaki Salmão</h3>
+            <span class="text-red-600 font-semibold">R$ 25,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Salmão fresco com cream cheese
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Temaki Salmão</h3>
+            <span class="text-red-600 font-semibold">R$ 25,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Salmão fresco com cream cheese
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Temaki Camarão</h3>
+            <span class="text-red-600 font-semibold">R$ 32,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Camarão temperado com cream cheese e pepino
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Temaki Hot</h3>
+            <span class="text-red-600 font-semibold">R$ 30,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Filadélfia empanado e frito com cream cheese e missô
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Temaki Atum</h3>
+            <span class="text-red-600 font-semibold">R$ 26,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Atum fresco com cream cheese e cebolinha
+          </p>
+        </div>
+
+      </div> -->
+
+      <!-- Categoria: Bebidas
+      <div id="cat-bebidas" class="categoria-conteudo hidden">
+        <h2 class="text-xl font-semibold mt-10 mb-4">Bebidas</h2>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Refrigerante</h3>
+            <span class="text-red-600 font-semibold">R$ 8,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Lata 350ml (Coca-Cola, Guaraná, Sprite)
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Água Mineral</h3>
+            <span class="text-red-600 font-semibold">R$ 4,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Garrafa 500ml (com ou sem gás)
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Cerveja Heineken</h3>
+            <span class="text-red-600 font-semibold">R$ 14,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Long Check 330ml
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Suco Natural</h3>
+            <span class="text-red-600 font-semibold">R$ 12,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Laranja, Maracujá ou Limão (300ml)
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Sakê Quente</h3>
+            <span class="text-red-600 font-semibold">R$ 18,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Bebida tradicional japonesa, 150ml
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+          <div class="flex justify-between">
+            <h3 class="font-bold">Chá Verde</h3>
+            <span class="text-red-600 font-semibold">R$ 7,00</span>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Quente ou Gelado (300ml)
+          </p>
+        </div>
+
+      </div> -->
+
+
+
+
+      <!-- Categoria: Sobremesas
+    <div id="cat-sobremesas" class="categoria-conteudo">
+
+      <h2 class="text-xl font-semibold mt-10 mb-4">Sobremesas</h2>
+
+      <div class="bg-white p-6 rounded-lg shadow mb-6">
+        <div class="flex justify-between">
+          <h3 class="font-bold">Mochi de Morango</h3>
+          <span class="text-red-600 font-semibold">R$ 12,00</span>
+        </div>
+        <p class="text-gray-600 mt-2">
+          Bolinho de Arroz japonês recheado com morango
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow mb-6">
+        <div class="flex justify-between">
+          <h3 class="font-bold">Mochi de Matchá</h3>
+          <span class="text-red-600 font-semibold">R$ 12,00</span>
+        </div>
+        <p class="text-gray-600 mt-2">
+          Salmão fresco com cream cheese
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow mb-6">
+        <div class="flex justify-between">
+          <h3 class="font-bold">Dorayaki</h3>
+          <span class="text-red-600 font-semibold">R$ 10,00</span>
+        </div>
+        <p class="text-gray-600 mt-2">
+          Panqueca japosena com recheio de pasta de feijão azuki
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow mb-6">
+        <div class="flex justify-between">
+          <h3 class="font-bold">Sorvete de Natchá</h3>
+          <span class="text-red-600 font-semibold">R$ 15,00</span>
+        </div>
+        <p class="text-gray-600 mt-2">
+          Sorvete artesanal de chá verde japonês (2 bolas)
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow mb-6">
+        <div class="flex justify-between">
+          <h3 class="font-bold">Tempura de Banana</h3>
+          <span class="text-red-600 font-semibold">R$ 14,00</span>
+        </div>
+        <p class="text-gray-600 mt-2">
+          Banana empanada á japonesa com mel e canela
+        </p>
+      </div>
+
+    </div> -->
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="mt-[100px] text-center p-[50px] text-sm text-white bg-footer">
+    <h3 class="font-bold text-lg">Haruy Sushi</h3>
+    <p class="my-[3px]">Rua Prof. Toledo, 500 Centro - Sorocaba</p>
+    <p class="my-[3px]">WhatsApp: (15) 98766-4321</p>
+    <p class="my-[3px]">Aberto todos os dias, das 14h às 23h</p>
+  </footer>
+
+  <!-- Botão Flutuante WatsApp -->
+  <a href="https://wa.me/5515987664321" target="_blank" class="fixed  right-6 buttom-5">
+    <img src="./img/whatsapp.png" alt="link do whatsapp" class="h-[60px]">
+  </a>
+
+  <!-- MODAL DE DETALHES DO PRODUTO -->
+  <div id="detalhes-modal"
+    class="fixed inset-0 bg-black/70 z-[80] flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+    <div
+      class="bg-white w-full max-w-[400px] rounded-[30px] overflow-hidden transform scale-95 transition-transform duration-300 relative flex flex-col"
+      id="detalhes-modal-content">
+
+      <!-- Botão Fechar -->
+      <button onclick="fecharModalDetalhes()"
+        class="absolute top-4 right-4 bg-white/80 backdrop-blur-md text-dark w-10 h-10 rounded-full flex justify-center items-center font-bold text-2xl shadow-sm z-10 hover:text-primary active:scale-90 transition-all">&times;</button>
+
+      <!-- Imagem -->
+      <div class="w-full h-[280px] bg-gray-50 flex justify-center items-center p-8 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-100 to-white opacity-50"></div>
+        <img id="detalhes-img" src="" alt="Produto"
+          class="w-full h-full object-contain drop-shadow-xl relative z-10 transition-transform duration-500 hover:scale-105">
+      </div>
+
+      <!-- Infos -->
+      <div class="p-6">
+        <h2 id="detalhes-nome" class="text-3xl font-black text-dark mb-1 leading-tight tracking-tight">Nome do
+          Produto</h2>
+        <p id="detalhes-preco" class="text-2xl font-black text-primary mb-4 drop-shadow-sm">R$ 0,00</p>
+        <div class="bg-gray-50 rounded-xl p-4 mb-6">
+          <p id="detalhes-desc" class="text-gray-600 text-sm leading-relaxed font-medium">Descrição detalhada
+            do produto vai aqui...</p>
+        </div>
+
+        <button id="detalhes-btn-add"
+          class="w-full bg-gradient-to-r from-primary to-[#a82d2f] text-white py-4 rounded-xl text-[17px] font-extrabold shadow-[0_8px_20px_-6px_rgba(202,60,63,0.5)] hover:shadow-[0_8px_25px_-4px_rgba(202,60,63,0.6)] active:scale-[0.98] transition-all outline-none flex justify-center items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+            stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
+          Adicionar ao Pedido
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ CARRINHO FIXO (Abre Modal) -->
+    <div id="carrinho-footer"
+        class="fixed bottom-0 left-0 w-full bg-primary text-white p-4 z-50 shadow-[0_-4px_6px_rgba(0,0,0,0.1)] transform translate-y-full transition-transform duration-300 flex justify-between items-center cursor-pointer"
+        onclick="abrirModalCarrinho()">
+        <div>
+            <p class="text-sm font-medium">Resumo do Pedido</p>
+            <p class="text-xl font-bold">Total: <span id="carrinho-total">R$ 0,00</span></p>
+        </div>
+        <button class="bg-white text-primary px-4 py-2 rounded-lg font-bold shadow-md active:scale-95 transition-all">
+            Ver Carrinho
+        </button>
+    </div>
+
+    <!-- MODAL DO CARRINHO (Detalhes) -->
+    <div id="carrinho-modal"
+        class="fixed inset-0 bg-black/60 z-[60] flex flex-col justify-end sm:justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300">
+
+        <!-- Conteúdo do Modal -->
+        <div class="bg-white w-full sm:w-[500px] h-[85vh] sm:h-auto sm:max-h-[85vh] rounded-t-3xl sm:rounded-2xl flex flex-col transform translate-y-full sm:translate-y-0 sm:scale-95 transition-transform duration-300"
+            id="carrinho-modal-content">
+
+            <!-- Cabelho Modal -->
+            <div class="p-5 border-b flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-dark">Seu Carrinho</h2>
+                <button onclick="fecharModalCarrinho()"
+                    class="text-3xl font-bold text-muted hover:text-dark focus:outline-none">&times;</button>
+            </div>
+
+            <!-- Corpo Modal (Itens) -->
+            <div id="carrinho-itens-container" class="p-5 flex-1 overflow-y-auto flex flex-col gap-4">
+                <!-- Itens serão injetados aqui via JS -->
+            </div>
+
+            <!-- Rodapé Modal (Checkout) -->
+            <div class="p-5 border-t bg-gray-50 rounded-b-3xl sm:rounded-b-2xl">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-bold">Total do Pedido:</span>
+                    <span id="modal-carrinho-total" class="text-2xl font-black text-primary">R$ 0,00</span>
+                </div>
+                <button onclick="fecharPedido()" id="btn-fechar-pedido"
+                    class="w-full bg-primary text-white py-3 rounded-xl text-lg font-bold shadow-lg hover:bg-red-700 active:scale-95 transition-all">
+                    Fechar Pedido (Usar GPS)
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+  <script>
+    const btn = document.getElementById('btn-mobile');
+    const menu = document.getElementById('menu-mobile');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+
+  <!-- Script Para Botão Categoria -->
+  <script>
+    const botoes = document.querySelectorAll('.btn-cat');
+    const conteudos = document.querySelectorAll('.categoria-conteudo');
+
+    function mudarCategoria(cat) {
+      conteudos.forEach(div => {
+        div.id === 'cat-' + cat
+          ? div.classList.remove('hidden')
+          : div.classList.add('hidden');
+      });
+
+      botoes.forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.classList.add('bg-primary', 'text-white');
+          btn.classList.remove('bg-[#ebebeb]', 'text-dark');
+        } else {
+          btn.classList.remove('bg-primary', 'text-white');
+          btn.classList.add('bg-[#ebebeb]', 'text-dark');
+        }
+      });
+    }
+
+
+
+    // // Adiciona Eventos a Cada Botão
+    // botoes.forEach(btn => {
+    //   btn.addEventListener('touchstart', () => {
+    //     btn.classList.add('scale-95');
+    //     mudarCategoria(btn.dataset.cat);
+    //   });
+    //   btn.addEventListener('touchend', () => {
+    //     btn.classList.remove('scale-95');
+    //   });
+    //   btn.addEventListener('click', () => {
+    //     mudarCategoria(btn.dataset.cat);
+    //   });
+    // });
+
+
+
+
+    // Ativar scroll suave para links internos
+    let startX = 0;
+    let startY = 0;
+
+    // Evento de cada botão
+    botoes.forEach(btn => {
+      // touchstart é disparado assim que o dedo toca a tela
+      btn.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        // Aplica class tailwild para efeito de clique
+        btn.classList.add('scale-95', 'opacity-80')
+      });
+      // Touched quando tira o dedo da tela
+      btn.addEventListener('touchend', (e) => {
+        // Remove efeito visual
+        btn.classList.remove('scale-95', 'opacity-80')
+        // Ultima posição do dedo antes de levantar
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
+        // Calcula distância percorrida pelo dedo em pixels
+        const deltaX = Math.abs(endX - startX);
+        const deltaY = Math.abs(endY - startY);
+        // Lógica matemática se move menos de 10px = clique intensional 
+        if (deltaX < 10 && deltaY < 10) {
+          mudarCategoria(btn.dataset.cat);
+        }
+      });
+      // Touchcancel se o celular aparecer uma ligação ou notificação popup
+      btn.addEventListener('touchcancel', () => {
+        btn.classList.remove('scale-95', 'opacity-80');
+      });
+      // Click para usuários desktop
+      btn.addEventListener('click', () => {
+        mudarCategoria(btn.dataset.cat);
+      });
+    });
+
+
+  </script>
+
+
+</body>
+
+</html>
